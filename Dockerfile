@@ -6,8 +6,8 @@ COPY conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 COPY conf/host-manager.xml /usr/local/tomcat/conf/Catalina/localhost/host-manager.xml
 COPY conf/manager.xml /usr/local/tomcat/conf/Catalina/localhost/manager.xml
 
-RUN curl -L -O "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.4.2-amd64.deb" && \
-    dpkg -i filebeat-6.4.2-amd64.deb;
+RUN curl -L -O "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb" && \
+    dpkg -i filebeat-7.4.0-amd64.deb;
 
 COPY conf/filebeat.yml /etc/filebeat/filebeat.yml
 
