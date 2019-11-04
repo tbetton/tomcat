@@ -11,6 +11,9 @@ RUN curl -L -O "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6
 
 COPY conf/filebeat.yml /etc/filebeat/filebeat.yml
 
+
+CMD "service filebeat start"
+
 #EXPOSE PORT
 EXPOSE 8080
 
