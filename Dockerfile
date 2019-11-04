@@ -9,6 +9,8 @@ COPY conf/manager.xml /usr/local/tomcat/conf/Catalina/localhost/manager.xml
 RUN curl -L -O "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.4.2-amd64.deb" && \
     dpkg -i filebeat-6.4.2-amd64.deb;
 
+COPY conf/filebeat.yml /etc/filebeat/filebeat.yml
+
 #EXPOSE PORT
 EXPOSE 8080
 
